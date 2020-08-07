@@ -63,7 +63,7 @@
 
 ```ps
 # Clone the repository using git
-$ git clone https://github.com/pmqueiroz/proffy.git
+$ git clone https://github.com/edipoferro/nlw-proffy.git
 
 # Access the project folder
 $ cd proffy
