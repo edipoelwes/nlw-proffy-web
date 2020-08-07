@@ -55,10 +55,6 @@
     * [Requirements](#Requirements)
         * [Web](#Web)
     * [Running](#Running)
-* [Issues](#Issues-)
-    * [Report](#Report)
-    * ~~Trouble Shooting~~
-* [Contributing](#Contributing-)
 * [License](#License-)
 
 ### Getting Started 🚀
