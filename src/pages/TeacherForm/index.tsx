@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState }from "react";
 
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
@@ -9,7 +9,21 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
 
+
 function TeacherForm() {
+
+  const [scheduleItems, setScheduleItems] = useState([
+    { week_day: 0, from: '', to: '' },
+  ]);
+
+  function addNewScheduleItem() {
+
+    setScheduleItems([
+      ...scheduleItems,
+      { week_day: 0, from: '', to: '' }
+    ]);
+  }
+
   return (
     <div id="page-teacher-form" className="container">
       <PageHeader
@@ -56,30 +70,34 @@ function TeacherForm() {
         <fieldset>
           <legend>
             Horários disponiveis
-           <button type="button">+ Novo Horario</button>
+           <button type="button" onClick={addNewScheduleItem} >+ Novo Horario</button>
           </legend>
 
-          <div className="schedule-item">
-            <Select
-              name="subject"
-              label="Máteria"
-              options={[
-                { value: 'Artes', label: 'Artes' },
-                { value: 'Biologia', label: 'Biologia' },
-                { value: 'Ciências', label: 'Ciências' },
-                { value: 'Educação Física', label: 'Educação Física' },
-                { value: 'Física', label: 'Física' },
-                { value: 'Quimica', label: 'Quimica' },
-                { value: 'Geografia', label: 'Geografia' },
-                { value: 'Historia', label: 'Historia' },
-                { value: 'Matemática', label: 'Matemática' },
-                { value: 'Português', label: 'Português' },
-              ]}
-            />
+          {scheduleItems.map(scheduleItem => {
+            return (
+              <div key={scheduleItem.week_day} onClick={addNewScheduleItem} className="schedule-item">
+                <Select
+                  name="subject"
+                  label="Máteria"
+                  options={[
+                    { value: 'Artes', label: 'Artes' },
+                    { value: 'Biologia', label: 'Biologia' },
+                    { value: 'Ciências', label: 'Ciências' },
+                    { value: 'Educação Física', label: 'Educação Física' },
+                    { value: 'Física', label: 'Física' },
+                    { value: 'Quimica', label: 'Quimica' },
+                    { value: 'Geografia', label: 'Geografia' },
+                    { value: 'Historia', label: 'Historia' },
+                    { value: 'Matemática', label: 'Matemática' },
+                    { value: 'Português', label: 'Português' },
+                  ]}
+                />
 
-            <Input name="from" label="Das" type="time" />
-            <Input name="to" label="Até" type="time"/>
-          </div>
+                <Input name="from" label="Das" type="time" />
+                <Input name="to" label="Até" type="time" />
+              </div>
+            );
+          })}
           
         </fieldset>
 
