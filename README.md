@@ -114,25 +114,5 @@ $ cd web
 $ yarn start
 ```
 
-To start the Back Server run the command
-
-```ps
-# Entering in Server directory
-$ cd server
-
-# Run the Back Server
-$ yarn start
-```
-
-To run the mobile version run the command
-
-```ps
-# Entering in Mobile directory
-$ cd mobile
-
-# Run the Mobile Version
-$ yarn start
-```
-
 ### License 📝
 This project is under the MIT license. See the [LICENSE][license-url] for more information.
