@@ -41,7 +41,7 @@ function TeacherForm() {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
 
-    api.post("classes", {
+    api.post("/classes", {
       name,
       avatar,
       whatsapp,
