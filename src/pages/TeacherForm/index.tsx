@@ -180,7 +180,7 @@ function TeacherForm() {
                       { value: "3", label: "Quarta-feira" },
                       { value: "4", label: "Quinta-feira" },
                       { value: "5", label: "Sexta-feira" },
-                      { value: "6", label: "Sabado-feira" },
+                      { value: "6", label: "Sabado" },
                     ]}
                   />
 
