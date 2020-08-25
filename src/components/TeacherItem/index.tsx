@@ -1,6 +1,5 @@
 import React from "react";
 
-import avatarImg from "../../assets/images/avatar.jpg";
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 
 import "./styles.css";
